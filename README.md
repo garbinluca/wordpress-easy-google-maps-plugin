@@ -13,7 +13,7 @@ The plugin replaces all elements with `easy-google-maps` class.
 - longitude: number
 - zoom: number (default: 8)
 - pin: object (default: null). Es: `{src: 'https://www.example.com/pin.png', width: 10, height: 10}`
-- styles: array (default: null). See [snazzymaps.com](snazzymaps.com)
+- styles: array (default: null). See [snazzymaps.com](https://www.snazzymaps.com)
 
 [Google Api Key](https://console.developers.google.com/) is required: add `define('EASY_GOOGLE_MAPS_KEY', '{YOUR_API_KEY}')` to `wp-config.php`.
 
