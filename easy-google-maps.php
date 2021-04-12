@@ -6,10 +6,6 @@ Description:
 Version: 0.1.0
 Author: Luca Garbin
 Author URI: https://www.lucagarbin.it
-Text Domain: lg-google-maps
-
-<div class="lg-google-maps" data-zoom="7" data-pin='{"src": "<?php echo get_template_directory_uri() ?>/assets/lg-google-maps-pin.png", "width": 40, "height": 40}' data-latitude="46.159730" data-longitude="11.118710" data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#5f3b34"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.neighborhood","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"administrative.neighborhood","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#471E16"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#392718"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#5f3b34"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#5f3b34"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#331610"}]}]'></div>
-
 
 */
 
@@ -41,14 +37,10 @@ class EasyGoogleMaps {
     public function registerAssets() {
 
         wp_register_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $this->getKey() .'&callback=easyGoogleMapsInitCallback', null, $this->version, true);
-        wp_register_script( 'easy-google-maps-js', $this->pluginPath . 'assets/front/scripts.js', [], $this->version, true);
-
-        wp_register_style( 'easy-google-maps-css', $this->pluginPath . 'assets/front/style.css', null, $this->version);
+        wp_register_script( 'easy-google-maps-js', $this->pluginPath . 'assets/scripts.js', [], $this->version, true);
 
         wp_enqueue_script('easy-google-maps-js');
         wp_enqueue_script('google-maps-api');
-
-        wp_enqueue_style('easy-google-maps-css');
 
     }
 
