@@ -1,4 +1,4 @@
-# Easy Google Maps Plugin
+# Easy Wordpress Google Maps Plugin
 
 Simple Wordpress plugin for GoogleMaps integration.
 
